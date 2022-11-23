@@ -28,15 +28,15 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **chaabaneAnas**
 
-- GitHub: [@githubhandle](https://github.com/ChaabaneAnas/
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/ChaabaneAnas/)
+- Twitter: [@twitterhandle](https://twitter.com/chaabaneanas)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/AnasChabaane)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ChaabaneAnas/Capstone-Project/issues).
+Feel free to check the [issues page](https://github.com/ChaabaneAnas/blog_app/issues).
 
 ## Show your support
 
@@ -44,7 +44,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Original design idea by [Cindy Shin in Behance.](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)
 - Microverse team and the mentors
 
 ## 📝 License

@@ -1,24 +1,52 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails blog_app
 
-Things you may want to cover:
+A Blog app will be a classic example of a blog website. User will be able create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby
+- Rails
+- No Technologies used
 
-* Configuration
 
-* Database creation
+## Getting Started
 
-* Database initialization
 
-* How to run the test suite
+To get a local copy up and running follow these simple example steps.
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+1. Run: git clone git@github.com:ChaabaneAnas/blog_app.git
+2. navigate to the project folder
+4. Run "code ." 
+3. Run rails s to see it live
+4. there u go !
+```
 
-* Deployment instructions
+## Authors
 
-* ...
+👤 **chaabaneAnas**
+
+- GitHub: [@githubhandle](https://github.com/ChaabaneAnas/
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/ChaabaneAnas/Capstone-Project/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Original design idea by [Cindy Shin in Behance.](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)
+- Microverse team and the mentors
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.

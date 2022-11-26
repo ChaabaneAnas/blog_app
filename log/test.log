@@ -1,0 +1,184 @@
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 10:54:59.468486"], ["updated_at", "2022-11-26 10:54:59.468486"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 10:55:30.171762"], ["updated_at", "2022-11-26 10:55:30.171762"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 10:58:07.881955"], ["updated_at", "2022-11-26 10:58:07.881955"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 10:58:07.951922"], ["updated_at", "2022-11-26 10:58:07.951922"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 10:58:24.401811"], ["updated_at", "2022-11-26 10:58:24.401811"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:03:50.467822"], ["updated_at", "2022-11-26 13:03:50.467822"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:03:50.516579"], ["updated_at", "2022-11-26 13:03:50.516579"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:03:50.522799"], ["updated_at", "2022-11-26 13:03:50.522799"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:05:17.083335"], ["updated_at", "2022-11-26 13:05:17.083335"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:05:17.093921"], ["updated_at", "2022-11-26 13:05:17.093921"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:05:53.545267"], ["updated_at", "2022-11-26 13:05:53.545267"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:05:53.554653"], ["updated_at", "2022-11-26 13:05:53.554653"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:12:15.701284"], ["updated_at", "2022-11-26 13:12:15.701284"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:12:15.710918"], ["updated_at", "2022-11-26 13:12:15.710918"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:13:14.166466"], ["updated_at", "2022-11-26 13:13:14.166466"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:13:14.175481"], ["updated_at", "2022-11-26 13:13:14.175481"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:31:42.314235"], ["updated_at", "2022-11-26 13:31:42.314235"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (4.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:31:42.321691"], ["updated_at", "2022-11-26 13:31:42.321691"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:32:28.831530"], ["updated_at", "2022-11-26 13:32:28.831530"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "created_at", "updated_at", "post_counter") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tom"], ["bio", "Teacher from Mexico."], ["photo", "https://unsplash.com/photos/F_-0BxGuVvo"], ["created_at", "2022-11-26 13:32:28.839059"], ["updated_at", "2022-11-26 13:32:28.839059"], ["post_counter", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[31mROLLBACK[0m

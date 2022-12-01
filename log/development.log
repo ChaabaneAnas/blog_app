@@ -415,3 +415,164 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-11-29 19:34:12 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 448)
+  Rendered layout layouts/application.html.erb (Duration: 1366.2ms | Allocations: 87618)
+Completed 200 OK in 1400ms (Views: 1378.7ms | ActiveRecord: 0.0ms | Allocations: 93553)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-11-29 19:34:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/1" for 127.0.0.1 at 2022-11-29 19:34:39 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 2619)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 3029)
+
+
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2022-11-29 20:19:32 +0100
+  
+ActionController::RoutingError (uninitialized constant PostsController):
+  
+Started GET "/rails/info/routes?path=user_post_path" for 127.0.0.1 at 2022-11-29 20:19:53 +0100
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user_post_path"}
+Completed 200 OK in 6ms (Views: 0.5ms | Allocations: 1946)
+
+
+Started GET "/rails/info/routes?path=user_post_pa" for 127.0.0.1 at 2022-11-29 20:19:59 +0100
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user_post_pa"}
+Completed 200 OK in 3ms (Views: 0.4ms | Allocations: 724)
+
+
+Started GET "/rails/info/routes?path=user_post_pat" for 127.0.0.1 at 2022-11-29 20:20:00 +0100
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user_post_pat"}
+Completed 200 OK in 3ms (Views: 0.4ms | Allocations: 727)
+
+
+Started GET "/rails/info/routes?path=user_post_path" for 127.0.0.1 at 2022-11-29 20:20:01 +0100
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user_post_path"}
+Completed 200 OK in 6ms (Views: 0.4ms | Allocations: 724)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-11-29 20:20:12 +0100
+  
+ActionController::RoutingError (uninitialized constant PostsController):
+  
+Started GET "/users/1" for 127.0.0.1 at 2022-11-29 20:20:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 14492)
+Completed 200 OK in 44ms (Views: 42.1ms | Allocations: 15652)
+
+
+Started GET "/users/1posts/1" for 127.0.0.1 at 2022-11-29 20:24:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/1posts/1"):
+  
+Started GET "/users/1posts/1" for 127.0.0.1 at 2022-11-29 20:24:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/1posts/1"):
+  
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2022-11-29 20:24:58 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 132.0ms | Allocations: 34411)
+Completed 200 OK in 151ms (Views: 137.2ms | ActiveRecord: 0.0ms | Allocations: 38297)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-11-29 20:25:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/" for 127.0.0.1 at 2022-11-29 20:25:53 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 38.1ms | Allocations: 14185)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms | Allocations: 15201)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-29 20:26:32 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.4ms | Allocations: 396)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 1440)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-11-29 20:26:38 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | Allocations: 14504)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.0ms | Allocations: 15723)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-29 20:31:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.0ms | Allocations: 729)
+Completed 200 OK in 26ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 6527)
+
+
+Started GET "/users" for ::1 at 2022-11-29 20:31:37 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 151.8ms | Allocations: 34672)
+Completed 200 OK in 160ms (Views: 158.1ms | ActiveRecord: 0.0ms | Allocations: 35970)
+
+
+Started GET "/users/1" for ::1 at 2022-11-29 20:31:46 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 2474)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 2855)
+
+
+Started GET "/users/1/posts" for ::1 at 2022-11-29 20:31:51 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 2755)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 3773)
+
+
+Started GET "/users/1/posts/5" for ::1 at 2022-11-29 20:31:56 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 2445)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 2841)
+
+

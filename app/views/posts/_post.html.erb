@@ -1,0 +1,19 @@
+<%= form_with model: @post, url: user_posts_path do |f| %>
+  <% if@post.errors.any? %> 
+  <div alert alert-danger>
+    <% @post.errors.full_messages.each do |message|%>
+      <div> <%= message %> <div>
+    <% end %> 
+  </div>
+
+  <% end %>
+  <div class="mb-3">
+      <%= f.label :title, class:"form-label" %>
+      <%= f.text_field :title, class:"form-control", placeholder:"Your post title here" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :text, class:"form-label" %>
+    <%= f.text_area :text, size: '50x10', class:"form-control", placeholder:"Your post body here" %>
+    </div>
+  <%= f.submit "Post",class:"btn btn-primary" %>
+<% end %>

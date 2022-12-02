@@ -11,7 +11,7 @@ class Post < ApplicationRecord
     User.find(id).increment!(:post_counter)
   end
 
-  def self.recent(id)
-    Comment.limit(5).order(created_at: :asc).where("post_id = #{id}")
+  def recent
+    comments.order(created_at: :desc).limit(5)
   end
 end

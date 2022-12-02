@@ -29,6 +29,7 @@
       <div class="card-body">
         <% @comments.each do |comment| %>
           <p class="card-text"><%= comment.user.name %>: <%= comment.text %></p>
+          <%= render 
         <% end %>
       </div>
     </div>

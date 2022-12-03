@@ -4,7 +4,27 @@ class CommentsController < ApplicationController
     @comments = c_post.comments
   end
 
+  def new
+    @comment = Comment.new
+  end
+
+  def create
+    @current_post = Post.find(params[:post_id])
+    @comment = Comment.new(comment_params)
+    @comment.post = @current_post
+    @comment.user = current_user
+    if @comment.save
+      redirect_to "/users/#{current_user.id}/posts/#{@current_post.id}"
+    else
+      render :new
+    end
+  end
+
   def show; end
 
-  def new; end
+  private
+
+  def comment_params
+    params.require(:comment).permit(:text)
+  end
 end

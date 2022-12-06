@@ -10,6 +10,7 @@ Rails.application.configure do
     Bullet.add_footer    = true
   end
 
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -77,9 +78,5 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
   
-  if defined? Bullet
-    Bullet.enable = true
-    # Bullet.alert = true
-    Bullet.bullet_logger = true
-  end
+
 end

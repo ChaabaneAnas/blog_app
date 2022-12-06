@@ -12396,3 +12396,1004 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 48ms (Views: 32.9ms | ActiveRecord: 4.9ms | Allocations: 9405)
 
 
+Started GET "/users/3/posts/5" for ::1 at 2022-12-06 14:56:39 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"5"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 3) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 22.5ms | Allocations: 5070)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 7241)
+Completed 200 OK in 72ms (Views: 31.6ms | ActiveRecord: 17.3ms | Allocations: 12322)
+
+
+Started GET "/" for ::1 at 2022-12-06 14:56:44 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1896)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 4242)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 2.2ms | Allocations: 4620)
+
+
+Started GET "/users/1" for ::1 at 2022-12-06 14:56:51 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.2ms | Allocations: 19)
+  [1m[36mPost Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [3 times] (Duration: 1.7ms | Allocations: 525)
+  Rendered users/show.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2151)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 4483)
+Completed 200 OK in 25ms (Views: 18.1ms | ActiveRecord: 1.9ms | Allocations: 5485)
+
+
+Started GET "/users/1/posts/6" for ::1 at 2022-12-06 14:56:54 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"6"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 1) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 20.6ms | Allocations: 5381)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 7552)
+Completed 200 OK in 44ms (Views: 29.2ms | ActiveRecord: 4.1ms | Allocations: 10069)
+
+
+user: anas
+GET /users/1/posts/6
+USE eager loading detected
+  Post => [:comments]
+  Add to your query: .includes([:comments])
+Call stack
+  /home/anas/repos/Microverse/Projects/blog_app/app/views/posts/show.html.erb:24:in `_app_views_posts_show_html_erb__713241181882580136_242040'
+
+
+Started GET "/users/" for ::1 at 2022-12-06 14:57:06 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1401)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 3749)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 1.5ms | Allocations: 4071)
+
+
+Started GET "/users/3" for ::1 at 2022-12-06 14:57:08 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mPost Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [1 times] (Duration: 0.8ms | Allocations: 192)
+  Rendered users/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1707)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4035)
+Completed 200 OK in 22ms (Views: 15.1ms | ActiveRecord: 2.0ms | Allocations: 5017)
+
+
+Started GET "/users/3/posts/5" for ::1 at 2022-12-06 14:57:09 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 3) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 19.6ms | Allocations: 5068)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 7239)
+Completed 200 OK in 36ms (Views: 24.7ms | ActiveRecord: 3.1ms | Allocations: 9247)
+
+
+Started GET "/users/2" for ::1 at 2022-12-06 14:57:15 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.2ms | Allocations: 18)
+  [1m[36mPost Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  Rendered users/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 3128)
+Completed 200 OK in 22ms (Views: 15.0ms | ActiveRecord: 1.1ms | Allocations: 4110)
+
+
+Started GET "/users/1" for ::1 at 2022-12-06 14:57:17 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mPost Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [3 times] (Duration: 4.4ms | Allocations: 525)
+  Rendered users/show.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2142)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 4486)
+Completed 200 OK in 33ms (Views: 20.9ms | ActiveRecord: 6.3ms | Allocations: 5468)
+
+
+Started GET "/users/1/posts/7" for ::1 at 2022-12-06 14:57:19 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"7"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 1) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1538)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3709)
+Completed 200 OK in 26ms (Views: 13.8ms | ActiveRecord: 2.5ms | Allocations: 6221)
+
+
+user: anas
+GET /users/1/posts/7
+USE eager loading detected
+  Post => [:comments]
+  Add to your query: .includes([:comments])
+Call stack
+  /home/anas/repos/Microverse/Projects/blog_app/app/views/posts/show.html.erb:24:in `_app_views_posts_show_html_erb__713241181882580136_242040'
+
+
+Started GET "/users/1/posts/7" for ::1 at 2022-12-06 14:58:23 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"7"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 1) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 38.1ms | Allocations: 5714)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 8276)
+Completed 200 OK in 75ms (Views: 50.3ms | ActiveRecord: 10.3ms | Allocations: 11598)
+
+
+Started GET "/users/1" for ::1 at 2022-12-06 14:58:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 3.3ms | Allocations: 219)
+  [1m[36mPost Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [3 times] (Duration: 6.7ms | Allocations: 811)
+  Rendered users/show.html.erb within layouts/application (Duration: 23.0ms | Allocations: 3215)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 5793)
+Completed 200 OK in 51ms (Views: 39.6ms | ActiveRecord: 3.7ms | Allocations: 7466)
+
+
+Started GET "/users/1/posts/7" for ::1 at 2022-12-06 14:58:28 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"7"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 1) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 30.8ms | Allocations: 4875)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 7062)
+Completed 200 OK in 92ms (Views: 38.5ms | ActiveRecord: 9.6ms | Allocations: 9692)
+
+
+Started GET "/users/1/posts/6" for ::1 at 2022-12-06 14:58:31 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 1) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 19.0ms | Allocations: 4843)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 7017)
+Completed 200 OK in 38ms (Views: 25.2ms | ActiveRecord: 2.9ms | Allocations: 9531)
+
+
+Started GET "/users/" for ::1 at 2022-12-06 14:58:33 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1704)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 4048)
+Completed 200 OK in 31ms (Views: 25.9ms | ActiveRecord: 1.1ms | Allocations: 4427)
+
+
+Started GET "/users/1" for ::1 at 2022-12-06 14:58:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.9ms | Allocations: 19)
+  [1m[36mPost Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [3 times] (Duration: 1.9ms | Allocations: 525)
+  Rendered users/show.html.erb within layouts/application (Duration: 19.6ms | Allocations: 2142)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 4470)
+Completed 200 OK in 43ms (Views: 30.9ms | ActiveRecord: 3.1ms | Allocations: 5474)
+
+
+Started GET "/users/1/posts/7" for ::1 at 2022-12-06 14:58:50 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"7"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 1) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 29.7ms | Allocations: 4836)
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | Allocations: 7008)
+Completed 200 OK in 60ms (Views: 35.4ms | ActiveRecord: 11.4ms | Allocations: 9520)
+
+
+Started POST "/users/1/posts/7/likes" for ::1 at 2022-12-06 14:58:51 +0100
+Processing by LikesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Like", "user_id"=>"1", "post_id"=>"7"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:3:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+  [1m[36mLike Create (1.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["post_id", 7], ["created_at", "2022-12-06 13:58:51.957748"], ["updated_at", "2022-12-06 13:58:51.957748"]]
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+  [1m[36mPost Update All (2.3ms)[0m  [1m[33mUPDATE "posts" SET "likes_counter" = COALESCE("likes_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["likes_counter", 1], ["id", 7]]
+  ↳ app/models/like.rb:9:in `update_likes_counter'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+Redirected to http://localhost:3000/users/1/posts/7
+Completed 302 Found in 57ms (ActiveRecord: 16.7ms | Allocations: 8805)
+
+
+Started GET "/users/1/posts/7" for ::1 at 2022-12-06 14:58:51 +0100
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"user_id"=>"1", "id"=>"7"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 1) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 19.2ms | Allocations: 4930)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 7200)
+Completed 200 OK in 40ms (Views: 25.8ms | ActiveRecord: 3.0ms | Allocations: 9872)
+
+
+Started GET "/users/1" for ::1 at 2022-12-06 14:58:58 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mPost Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [3 times] (Duration: 2.1ms | Allocations: 533)
+  Rendered users/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2163)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 4495)
+Completed 200 OK in 31ms (Views: 19.2ms | ActiveRecord: 3.5ms | Allocations: 5510)
+
+
+Started GET "/users/1/posts/6" for ::1 at 2022-12-06 14:59:02 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 1) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 18.3ms | Allocations: 4834)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 7005)
+Completed 200 OK in 37ms (Views: 23.6ms | ActiveRecord: 3.1ms | Allocations: 9517)
+
+
+Started GET "/users/" for ::1 at 2022-12-06 14:59:12 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1399)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 3743)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 1.0ms | Allocations: 4068)
+
+
+Started GET "/users/3" for ::1 at 2022-12-06 14:59:13 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.3ms | Allocations: 20)
+  [1m[36mPost Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [1 times] (Duration: 0.9ms | Allocations: 192)
+  Rendered users/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1708)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 4044)
+Completed 200 OK in 24ms (Views: 16.6ms | ActiveRecord: 1.5ms | Allocations: 5026)
+
+
+Started GET "/users/3/posts/5" for ::1 at 2022-12-06 14:59:14 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 3) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 17.7ms | Allocations: 4844)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 7015)
+Completed 200 OK in 34ms (Views: 23.0ms | ActiveRecord: 2.8ms | Allocations: 9025)
+
+
+Started GET "/users/1/posts/6" for ::1 at 2022-12-06 14:59:18 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 1) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (1.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 20.7ms | Allocations: 4852)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 7023)
+Completed 200 OK in 42ms (Views: 25.0ms | ActiveRecord: 5.5ms | Allocations: 9533)
+
+
+Started GET "/" for ::1 at 2022-12-06 15:45:04 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 29.6ms | Allocations: 4436)
+  Rendered layout layouts/application.html.erb (Duration: 40.4ms | Allocations: 6782)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 13.2ms | Allocations: 7102)
+
+
+Started GET "/users/1/posts/6" for ::1 at 2022-12-06 15:52:10 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"6"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 1) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 23.4ms | Allocations: 4842)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 7013)
+Completed 200 OK in 70ms (Views: 32.4ms | ActiveRecord: 16.1ms | Allocations: 12433)
+
+
+Started GET "/users/1" for ::1 at 2022-12-06 15:52:13 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.4ms | Allocations: 19)
+  [1m[36mPost Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [3 times] (Duration: 2.8ms | Allocations: 525)
+  Rendered users/show.html.erb within layouts/application (Duration: 26.0ms | Allocations: 2145)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 4479)
+Completed 200 OK in 55ms (Views: 43.7ms | ActiveRecord: 2.1ms | Allocations: 5464)
+
+
+Started GET "/" for ::1 at 2022-12-06 15:52:14 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1398)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 3740)
+Completed 200 OK in 26ms (Views: 22.0ms | ActiveRecord: 2.7ms | Allocations: 4064)
+
+
+Started GET "/users/3" for ::1 at 2022-12-06 15:52:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mPost Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [1 times] (Duration: 1.8ms | Allocations: 192)
+  Rendered users/show.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1707)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 4039)
+Completed 200 OK in 30ms (Views: 19.9ms | ActiveRecord: 1.8ms | Allocations: 5021)
+
+
+Started GET "/users/3/posts/5" for ::1 at 2022-12-06 15:52:17 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 3) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 20.7ms | Allocations: 4846)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 7017)
+Completed 200 OK in 40ms (Views: 27.5ms | ActiveRecord: 3.0ms | Allocations: 9025)
+
+
+Started POST "/users/3/posts/5/likes" for ::1 at 2022-12-06 15:52:20 +0100
+Processing by LikesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Like", "user_id"=>"3", "post_id"=>"5"}
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:3:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+  [1m[36mLike Create (3.0ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["post_id", 5], ["created_at", "2022-12-06 14:52:20.543610"], ["updated_at", "2022-12-06 14:52:20.543610"]]
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+  [1m[36mPost Update All (1.0ms)[0m  [1m[33mUPDATE "posts" SET "likes_counter" = COALESCE("likes_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["likes_counter", 1], ["id", 5]]
+  ↳ app/models/like.rb:9:in `update_likes_counter'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+Redirected to http://localhost:3000/users/3/posts/5
+Completed 302 Found in 28ms (ActiveRecord: 7.5ms | Allocations: 3916)
+
+
+Started GET "/users/3/posts/5" for ::1 at 2022-12-06 15:52:20 +0100
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"user_id"=>"3", "id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 3) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 20.8ms | Allocations: 4843)
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 7014)
+Completed 200 OK in 46ms (Views: 27.2ms | ActiveRecord: 3.7ms | Allocations: 9025)
+
+
+Started POST "/users/3/posts/5/likes" for ::1 at 2022-12-06 15:52:21 +0100
+Processing by LikesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Like", "user_id"=>"3", "post_id"=>"5"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:3:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+  [1m[36mLike Create (1.0ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["post_id", 5], ["created_at", "2022-12-06 14:52:21.402397"], ["updated_at", "2022-12-06 14:52:21.402397"]]
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+  [1m[36mPost Update All (0.9ms)[0m  [1m[33mUPDATE "posts" SET "likes_counter" = COALESCE("likes_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["likes_counter", 1], ["id", 5]]
+  ↳ app/models/like.rb:9:in `update_likes_counter'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+Redirected to http://localhost:3000/users/3/posts/5
+Completed 302 Found in 28ms (ActiveRecord: 4.5ms | Allocations: 3899)
+
+
+Started GET "/users/3/posts/5" for ::1 at 2022-12-06 15:52:21 +0100
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"user_id"=>"3", "id"=>"5"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 3) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (4.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 25.1ms | Allocations: 4848)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 7019)
+Completed 200 OK in 44ms (Views: 27.5ms | ActiveRecord: 8.3ms | Allocations: 9030)
+
+
+Started GET "/users/3" for ::1 at 2022-12-06 15:52:23 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mPost Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [1 times] (Duration: 0.9ms | Allocations: 192)
+  Rendered users/show.html.erb within layouts/application (Duration: 18.1ms | Allocations: 1708)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 4052)
+Completed 200 OK in 43ms (Views: 32.1ms | ActiveRecord: 2.3ms | Allocations: 5034)
+
+
+Started GET "/" for ::1 at 2022-12-06 15:52:25 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 1399)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 3748)
+Completed 200 OK in 29ms (Views: 24.7ms | ActiveRecord: 2.8ms | Allocations: 4072)
+
+
+Started GET "/users/2" for ::1 at 2022-12-06 15:52:26 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mPost Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  Rendered users/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3146)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 1.2ms | Allocations: 4132)
+
+
+Started GET "/users/2/posts" for ::1 at 2022-12-06 15:52:28 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1414)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 3768)
+Completed 200 OK in 31ms (Views: 22.7ms | ActiveRecord: 1.3ms | Allocations: 4691)
+
+
+Started GET "/users/2/posts/new" for ::1 at 2022-12-06 15:52:30 +0100
+Processing by PostsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 36.0ms | Allocations: 4779)
+  Rendered posts/new.html.erb within layouts/application (Duration: 38.1ms | Allocations: 5026)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | Allocations: 7318)
+Completed 200 OK in 57ms (Views: 50.1ms | ActiveRecord: 0.8ms | Allocations: 8347)
+
+
+Started POST "/users/2/posts" for ::1 at 2022-12-06 15:53:43 +0100
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Rspec and capybara", "text"=>"i find he concept of RSpec and capybara a Lil complicated than the provided content by Microverse"}, "commit"=>"Post", "user_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:21:in `create'
+  [1m[36mPost Create (2.9ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "text", "comments_counter", "likes_counter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["title", "Rspec and capybara"], ["text", "i find he concept of RSpec and capybara a Lil complicated than the provided content by Microverse"], ["comments_counter", 0], ["likes_counter", 0], ["created_at", "2022-12-06 14:53:43.262151"], ["updated_at", "2022-12-06 14:53:43.262151"]]
+  ↳ app/controllers/posts_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:21:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+Redirected to http://localhost:3000/users/1/posts
+Completed 302 Found in 34ms (ActiveRecord: 6.1ms | Allocations: 4154)
+
+
+Started GET "/users/1/posts" for ::1 at 2022-12-06 15:53:43 +0100
+Processing by PostsController#index as TURBO_STREAM
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mComment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 1], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:53
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mComment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 3], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:53
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 4], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:53
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:53
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mComment Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  Rendered posts/index.html.erb within layouts/application (Duration: 109.9ms | Allocations: 17345)
+  Rendered layout layouts/application.html.erb (Duration: 119.0ms | Allocations: 19684)
+Completed 200 OK in 124ms (Views: 108.6ms | ActiveRecord: 12.4ms | Allocations: 20584)
+
+
+user: anas
+GET /users/1/posts
+USE eager loading detected
+  Comment => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /home/anas/repos/Microverse/Projects/blog_app/app/views/posts/index.html.erb:54:in `block (2 levels) in _app_views_posts_index_html_erb__3055744607797808233_267640'
+  /home/anas/repos/Microverse/Projects/blog_app/app/views/posts/index.html.erb:53:in `block in _app_views_posts_index_html_erb__3055744607797808233_267640'
+  /home/anas/repos/Microverse/Projects/blog_app/app/views/posts/index.html.erb:28:in `_app_views_posts_index_html_erb__3055744607797808233_267640'
+
+
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+Started GET "/users/2/posts/new" for ::1 at 2022-12-06 16:07:09 +0100
+Processing by PostsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 8.5ms | Allocations: 1508)
+  Rendered posts/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1778)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 4354)
+Completed 200 OK in 67ms (Views: 33.3ms | ActiveRecord: 14.2ms | Allocations: 9176)
+
+
+Started GET "/" for ::1 at 2022-12-06 16:07:17 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1933)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 4525)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 1.0ms | Allocations: 5476)
+
+
+Started GET "/" for ::1 at 2022-12-06 20:03:23 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 58.5ms | Allocations: 18806)
+  Rendered layout layouts/application.html.erb (Duration: 457.8ms | Allocations: 53898)
+Completed 200 OK in 496ms (Views: 457.7ms | ActiveRecord: 9.4ms | Allocations: 64424)
+
+
+Started GET "/users/3" for ::1 at 2022-12-06 20:03:39 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 1.9ms | Allocations: 231)
+  [1m[36mPost Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [1 times] (Duration: 2.7ms | Allocations: 565)
+  Rendered users/show.html.erb within layouts/application (Duration: 53.2ms | Allocations: 18229)
+  Rendered layout layouts/application.html.erb (Duration: 61.6ms | Allocations: 20750)
+Completed 200 OK in 102ms (Views: 60.3ms | ActiveRecord: 7.8ms | Allocations: 28787)
+
+
+Started GET "/users/3/posts/5" for ::1 at 2022-12-06 20:03:40 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"5"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 3) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 46.4ms | Allocations: 19878)
+  Rendered layout layouts/application.html.erb (Duration: 52.9ms | Allocations: 22229)
+Completed 200 OK in 78ms (Views: 48.6ms | ActiveRecord: 8.9ms | Allocations: 28730)
+
+
+Started POST "/users/3/posts/5/likes" for ::1 at 2022-12-06 20:03:46 +0100
+Processing by LikesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Like", "user_id"=>"3", "post_id"=>"5"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:3:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+  [1m[36mLike Create (1.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["post_id", 5], ["created_at", "2022-12-06 19:03:46.335747"], ["updated_at", "2022-12-06 19:03:46.335747"]]
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+  [1m[36mPost Update All (0.9ms)[0m  [1m[33mUPDATE "posts" SET "likes_counter" = COALESCE("likes_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["likes_counter", 1], ["id", 5]]
+  ↳ app/models/like.rb:9:in `update_likes_counter'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/likes_controller.rb:5:in `create'
+Redirected to http://localhost:3000/users/3/posts/5
+Completed 302 Found in 55ms (ActiveRecord: 12.0ms | Allocations: 9377)
+
+
+Started GET "/users/3/posts/5" for ::1 at 2022-12-06 20:03:46 +0100
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"user_id"=>"3", "id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = 3) ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/posts_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:24
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/posts/show.html.erb:33
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/posts/show.html.erb:33
+  Rendered posts/show.html.erb within layouts/application (Duration: 19.4ms | Allocations: 4967)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 7245)
+Completed 200 OK in 38ms (Views: 27.2ms | ActiveRecord: 2.9ms | Allocations: 9415)
+
+
+Started GET "/users/3/posts/" for ::1 at 2022-12-06 20:57:09 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:53
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:54
+  Rendered posts/index.html.erb within layouts/application (Duration: 54.2ms | Allocations: 9112)
+  Rendered layout layouts/application.html.erb (Duration: 61.7ms | Allocations: 11631)
+Completed 200 OK in 94ms (Views: 58.5ms | ActiveRecord: 20.7ms | Allocations: 15657)
+
+
+user: anas
+GET /users/3/posts/
+USE eager loading detected
+  Comment => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /home/anas/repos/Microverse/Projects/blog_app/app/views/posts/index.html.erb:54:in `block (2 levels) in _app_views_posts_index_html_erb___1281341812579958378_26440'
+  /home/anas/repos/Microverse/Projects/blog_app/app/views/posts/index.html.erb:53:in `block in _app_views_posts_index_html_erb___1281341812579958378_26440'
+  /home/anas/repos/Microverse/Projects/blog_app/app/views/posts/index.html.erb:28:in `_app_views_posts_index_html_erb___1281341812579958378_26440'
+
+
+Started GET "/" for ::1 at 2022-12-06 21:02:45 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 29.7ms | Allocations: 4450)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 6800)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 13.1ms | Allocations: 7155)
+
+
+Started GET "/" for ::1 at 2022-12-06 21:04:42 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1399)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3739)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 2.1ms | Allocations: 4062)
+
+
+Started GET "/users/1" for ::1 at 2022-12-06 23:04:26 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_user.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mPost Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered collection of shared/_post.html.erb [3 times] (Duration: 1.9ms | Allocations: 540)
+  Rendered users/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2189)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 4525)
+Completed 200 OK in 47ms (Views: 17.9ms | ActiveRecord: 13.1ms | Allocations: 8443)
+
+

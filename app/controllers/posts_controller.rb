@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def show
     @user = User.includes(:posts).where("id = #{params[:user_id]}").first
-    @post = @user.posts.filter {|post| post.id = params[:id]}.first
+    @post = @user.posts.filter { |post| post.id = params[:id] }.first
     @comments = Comment.includes(:user)
   end
 

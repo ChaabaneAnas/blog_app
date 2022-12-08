@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :system do
   context 'Post index page' do
-
     before(:each) do
       @user = User.create(name: 'mouhamed',
                           photo: 'https://tunisia88.com/wp-content/uploads/2022/11/IMG-20211028-WA0010-e1667749608247.jpg', bio: 'Profissional Musician')

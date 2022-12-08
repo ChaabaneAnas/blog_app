@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :system do
-  
   context 'User index page' do
     before(:each) do
       @user = User.create(name: 'mouhamed',

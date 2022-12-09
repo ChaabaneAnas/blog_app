@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   get "/users", to: "users#index"
   
   resources :users, only: [:show] do
-    resources :posts,only: [:new, :create,:index, :show] do
-      resources :comments, only: [:index, :new, :create, :show]
+    resources :posts,only: [:new, :create,:index, :show, :destroy] do
+      resources :comments
       resources :likes, only: [:create]
     end
-  end 
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

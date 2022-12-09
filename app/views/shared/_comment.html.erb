@@ -1,0 +1,5 @@
+          <div>
+          <p class="card-text"><%= comment.user.name %>: <%= comment.text %></p>
+          <%= button_to 'delete', user_post_comment_path(@user, @post, comment), method: :delete, class:"btn btn-secondary" %>
+          </div>
+          

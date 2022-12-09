@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def show
-    @user = User.includes(:posts).where("id = #{params[:user_id]}").first
-    @post = @user.posts.filter { |post| post.id = params[:id] }.first
-    @comments = Comment.includes(:user)
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
+    @comments = @post.comments.includes(:user)
   end
 
   def index
@@ -23,6 +25,11 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    Post.destroy(params[:id])
+    redirect_to user_posts_path
   end
 
   private

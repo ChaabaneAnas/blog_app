@@ -11,8 +11,8 @@ class User < ApplicationRecord
   has_many :likes
 
   def role?
-    role == 'admin' ? true : false
-  end 
+    role == 'admin'
+  end
 
   def recent
     posts.order(created_at: :desc).limit(3)

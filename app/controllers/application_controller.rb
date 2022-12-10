@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :update_allowed_parameters, if: :devise_controller?
-  protect_from_forgery Prepend: true 
+  protect_from_forgery Prepend: true
 
   protected
 
@@ -10,6 +10,4 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password) }
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:bio, :email, :password, :current_password, :photo) }
   end
-
-
 end

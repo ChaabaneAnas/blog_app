@@ -1,5 +1,4 @@
 class Api::V1::PostsController < Api::ApplicationController
-  
   before_action :set_post, only: [:show]
   before_action :set_author, only: %i[index show]
   def index

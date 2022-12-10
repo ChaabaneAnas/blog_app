@@ -1,4 +1,3 @@
-
 class Api::ApplicationController < ActionController::API
   before_action :restrict_access
   respond_to :json
